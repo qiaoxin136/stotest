@@ -29,6 +29,7 @@ function App() {
       path: `picture-submissions/${file.name}`,
       data: file,
     });
+    console.log(file);
   };
 
   return (
