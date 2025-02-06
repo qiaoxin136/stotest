@@ -4,13 +4,18 @@ import { useAuthenticator } from '@aws-amplify/ui-react';
 //import { generateClient } from "aws-amplify/data";
 import { uploadData } from 'aws-amplify/storage';
 
+// Define the type for the file object
+type FileType = File | null;
+
+
+
 
 
 //const client = generateClient<Schema>();
 
 function App() {
   const { signOut } = useAuthenticator();
-  const [file, setFile] = useState();
+  const [file, setFile] = useState<FileType>();
 
   const handleChange = (event: any) => {
     setFile(event.target.files?.[0]);
