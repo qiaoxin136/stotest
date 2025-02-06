@@ -4,6 +4,8 @@ import { useAuthenticator } from '@aws-amplify/ui-react';
 //import { generateClient } from "aws-amplify/data";
 import { uploadData } from 'aws-amplify/storage';
 
+
+
 //const client = generateClient<Schema>();
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
       return;
     }
     uploadData({
-      path: `picture-submissions/`,
+      path: `picture-submissions/${file.name}`,
       data: file,
     });
   };
